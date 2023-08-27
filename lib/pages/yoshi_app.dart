@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../states/yoshiapp_controller.dart';
 
 class YoshiAppPage extends StatelessWidget {
   const YoshiAppPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    TaskController taskController = Get.put(TaskController());
     return Scaffold(
       // appBar: AppBar(
       //   automaticallyImplyLeading: false,
@@ -17,18 +20,23 @@ class YoshiAppPage extends StatelessWidget {
           Container(
             padding: const EdgeInsets.fromLTRB(15, 35, 15, 10),
             color: const Color.fromARGB(255, 229, 229, 229),
-            child: const Row(children: [
-              Icon(Icons.arrow_back_ios_new, size: 25),
+            child: Row(children: [
+              IconButton(
+                icon: const Icon(Icons.arrow_back_ios_new, size: 25),
+                onPressed: () {
+                  Get.back();
+                },
+              ),
               Expanded(
                   child: Text(
-                '2023/08/20',
+                "${taskController.task_length.value}",
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   color: Colors.black,
                 ),
               )),
-              Icon(Icons.arrow_forward_ios, size: 25)
+              const Icon(Icons.arrow_forward_ios, size: 25)
             ]),
           ),
           Container(
@@ -38,7 +46,9 @@ class YoshiAppPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween, // 行両端に配置
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    taskController.increment(1);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 255, 216, 161),
                     foregroundColor: const Color.fromARGB(255, 255, 255, 255),
