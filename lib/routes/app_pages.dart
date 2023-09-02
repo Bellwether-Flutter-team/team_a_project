@@ -1,5 +1,7 @@
 // import 'package:team_a_project/';
 import 'package:get/route_manager.dart';
+import 'package:team_a_project/pages/condition_page.dart';
+import 'package:team_a_project/pages/decide_page.dart';
 import 'package:team_a_project/pages/home.dart';
 import 'package:team_a_project/pages/riku_app.dart';
 import 'package:team_a_project/pages/yoshi_app.dart';
@@ -18,6 +20,14 @@ class AppPages {
     GetPage(
       name: AppRoutes.rikuApp,
       page: () => const RikuAppPae(),
+    ),
+    GetPage(
+      name: AppRoutes.conditionPage,
+      page: () => const ConditionPage(),
+    ),
+    GetPage(
+      name: AppRoutes.decidePage,
+      page: () => const DecidePage(),
     ),
   ];
 }
