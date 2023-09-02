@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../routes/app_routes.dart';
+import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class DecidePage extends StatelessWidget {
@@ -36,7 +38,9 @@ class DecidePage extends StatelessWidget {
             height: 100,
             margin: EdgeInsets.all(50),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.toNamed(AppRoutes.home);
+              },
               child: Text('最初に戻る'),
             ),
           ),
