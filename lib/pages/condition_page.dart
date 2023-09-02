@@ -18,14 +18,14 @@ class ConditionPage extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
-                  alignment: Alignment.center,
-                  height: 200,
-                  width: 200,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
+                Align(
+                  alignment: Alignment(500, 200),
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 200,
+                    width: 200,
+                    child: Text('ここに問題文'),
                   ),
-                  child: Text('ここに問題文'),
                 ),
               ],
             ),
