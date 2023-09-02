@@ -15,38 +15,61 @@ class ConditionPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+            SizedBox(
+              height: 70,
+            ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Container(
-                  alignment: Alignment.center,
-                  height: 200,
-                  width: 200,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black),
-                  ),
-                  child: Text('ここに問題文'),
+                Card(
+                  // alignment: Alignment.center,
+                  // height: 200,
+                  // width: 200,
+                  // decoration: BoxDecoration(
+                  //   border: Border.all(color: Colors.black),
+                  // ),
+                  child: Expanded(
+                      child: const Text(
+                    '人数は何人を予定していますか？',
+                    style: TextStyle(fontSize: 25),
+                  )),
                 ),
               ],
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+            const SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  child: const Text('1', semanticsLabel: '1'),
+                  child: const SizedBox(
+                      width: 30, child: Text('1', semanticsLabel: '1')),
                   onPressed: () {},
                 ),
+                const SizedBox(
+                  width: 5,
+                ),
                 ElevatedButton(
-                  child: const Text(
-                    '2',
-                    semanticsLabel: '2',
+                  child: const SizedBox(
+                    width: 30,
+                    child: Text(
+                      '2',
+                      semanticsLabel: '2',
+                    ),
                   ),
                   onPressed: () {},
                 ),
+                const SizedBox(
+                  width: 5,
+                ),
                 ElevatedButton(
-                  child: const Text(
-                    '3',
-                    semanticsLabel: '3',
+                  child: const SizedBox(
+                    width: 30,
+                    child: Text(
+                      '3',
+                      semanticsLabel: '3',
+                    ),
                   ),
                   onPressed: () {},
                 ),
