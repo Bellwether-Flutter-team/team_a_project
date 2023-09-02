@@ -15,46 +15,42 @@ class ConditionPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                backgroundColor: Theme.of(context).primaryColor,
-                foregroundColor: Colors.black,
-                elevation: 0,
-                shape: StadiumBorder(
-                  side: BorderSide(
-                      width: 1, color: Theme.of(context).primaryColor),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.center,
+                  height: 200,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black),
+                  ),
+                  child: Text('ここに問題文'),
                 ),
-              ),
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.55,
-                height: 45.0,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    const SizedBox(
-                      height: 100,
-                    ),
-                    Expanded(
-                      child: Container(
-                        width: double.infinity,
-                        alignment: Alignment.center,
-                        child: const Text(
-                          'DecidePageへ',
-                          style: TextStyle(
-                            fontSize: 15,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                ElevatedButton(
+                  child: const Text('1', semanticsLabel: '1'),
+                  onPressed: () {},
                 ),
-              ),
-              onPressed: () {
-                Get.toNamed(AppRoutes.decidePage);
-              },
+                ElevatedButton(
+                  child: const Text(
+                    '2',
+                    semanticsLabel: '2',
+                  ),
+                  onPressed: () {},
+                ),
+                ElevatedButton(
+                  child: const Text(
+                    '3',
+                    semanticsLabel: '3',
+                  ),
+                  onPressed: () {},
+                ),
+              ],
             ),
           ],
         ),
