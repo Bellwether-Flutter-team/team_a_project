@@ -16,9 +16,9 @@ class DecidePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
+            const SizedBox(
               height: 300,
-              child: const GoogleMap(
+              child: GoogleMap(
                 initialCameraPosition: CameraPosition(
                     zoom: 17, //ズーム
                     target: LatLng(35.0, 135.0), //経度,緯度
@@ -26,23 +26,23 @@ class DecidePage extends StatelessWidget {
                     bearing: 90.0),
               ),
             ),
-            Container(
+            SizedBox(
               width: 300,
               height: 100,
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text('外部サイトに飛ぶ'),
+                child: const Text('外部サイトに飛ぶ'),
               ),
             ),
             Container(
               width: 300,
               height: 100,
-              margin: EdgeInsets.all(50),
+              margin: const EdgeInsets.all(50),
               child: ElevatedButton(
                 onPressed: () {
                   Get.toNamed(AppRoutes.home);
                 },
-                child: Text('最初に戻る'),
+                child: const Text('最初に戻る'),
               ),
             ),
           ],
