@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_maps/google_maps.dart';
 class DecidePage extends StatelessWidget {
   const DecidePage({Key? key}) : super(key: key);
   @override
@@ -9,7 +9,14 @@ class DecidePage extends StatelessWidget {
         title: const Text("decidePage"),
         backgroundColor: Theme.of(context).highlightColor,
       ),
-      body: const Center(),
+      body: const Center(
+        child: ElevatedButton(
+           onPressed: null,
+              child: Text(
+                "1.Normal Button",
+              ),
+        )
+      )
     );
   }
 }

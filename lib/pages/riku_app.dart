@@ -8,7 +8,11 @@ class RikuAppPae extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).highlightColor,
       ),
-      body: const Center(),
+      body: const Center(
+        child: ElevatedButton(onPressed: onPressed, child: child)
+      ) 
+      ),
+      ),
     );
   }
 }
