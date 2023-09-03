@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:team_a_project/states/shopdatacontroler.dart';
 import 'package:get/get.dart';
-=======
->>>>>>> develop
+
 
 class ConditionPage extends StatelessWidget {
   const ConditionPage({Key? key}) : super(key: key);
@@ -20,7 +18,6 @@ class ConditionPage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-<<<<<<< HEAD
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -34,10 +31,7 @@ class ConditionPage extends StatelessWidget {
                   ),
                 ),
               ],
-=======
-            const SizedBox(
-              height: 70,
->>>>>>> develop
+
             ),
             Card(
               clipBehavior: Clip.antiAlias,
@@ -116,16 +110,11 @@ class ConditionPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-<<<<<<< HEAD
                   child: const Text('1', semanticsLabel: '1'),
                   onPressed: () {
                     shopDateControler.questionStateUpdate(0);
                   },
-=======
-                  child: const SizedBox(
-                      width: 30, child: Text('1', semanticsLabel: '1')),
-                  onPressed: () {},
->>>>>>> develop
+
                 ),
                 const SizedBox(
                   width: 5,
