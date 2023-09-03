@@ -91,7 +91,7 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Get.toNamed(AppRoutes.conditionPage);
+                Get.toNamed(AppRoutes.decidePage);
               },
             ),
             const SizedBox(
