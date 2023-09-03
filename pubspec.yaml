@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   get: ^4.6.5
   google_maps_flutter_web: ^0.5.4+1
+  firebase_core: ^2.15.1
   google_maps_flutter: ^2.5.0
   flutter_zxing: ^1.2.0
   geolocator: ^10.0.0
