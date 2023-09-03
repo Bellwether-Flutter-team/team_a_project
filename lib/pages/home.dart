@@ -135,7 +135,6 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-<<<<<<< HEAD
                 debugPrint("1");
 
                 Get.toNamed(AppRoutes.rikuApp);
@@ -145,9 +144,6 @@ class MyHomePage extends StatelessWidget {
                 debugPrint("3");
 
                 // DebugPrint(static Future<List<Hotpepperapi>> fetchHotpepperapi() async {});
-=======
-                Get.toNamed(AppRoutes.decidePage);
->>>>>>> develop
               },
             ),
           ],

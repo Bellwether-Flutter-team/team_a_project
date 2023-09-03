@@ -145,16 +145,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.17.1"
-<<<<<<< HEAD
-  csv:
-    dependency: transitive
-    description:
-      name: csv
-      sha256: "016b31a51a913744a0a1655c74ff13c9379e1200e246a03d96c81c5d9ed297b5"
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.0.2"
-=======
   color:
     dependency: transitive
     description:
@@ -187,15 +177,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
->>>>>>> develop
+  csv:
+    dependency: transitive
+    description:
+      name: csv
+      sha256: "016b31a51a913744a0a1655c74ff13c9379e1200e246a03d96c81c5d9ed297b5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.2"
   cupertino_icons:
     dependency: "direct main"
     description:
       name: cupertino_icons
-      sha256: e35129dc44c9118cee2a5603506d823bab99c68393879edb440e0090d07586be
+      sha256: d57953e10f9f8327ce64a508a355f0b1ec902193f66288e8cb5070e7c47eeb2d
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.5"
+    version: "1.0.6"
   dart_style:
     dependency: transitive
     description:
@@ -285,10 +282,10 @@ packages:
     dependency: "direct dev"
     description:
       name: flutter_lints
-      sha256: "2118df84ef0c3ca93f96123a616ae8540879991b8b57af2f81b76a7ada49b2a4"
+      sha256: a25a15ebbdfc33ab1cd26c63a6ee519df92338a9c10f122adda92938253bef04
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.2"
+    version: "2.0.3"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -323,16 +320,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.6.5"
-<<<<<<< HEAD
-  http:
-    dependency: "direct main"
-    description:
-      name: http
-      sha256: "759d1a329847dd0f39226c688d3e06a6b8679668e350e2891a6474f8b4bb8525"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
-=======
   glob:
     dependency: transitive
     description:
@@ -405,6 +392,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.15.4"
+  http:
+    dependency: "direct main"
+    description:
+      name: http
+      sha256: "759d1a329847dd0f39226c688d3e06a6b8679668e350e2891a6474f8b4bb8525"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   http_multi_server:
     dependency: transitive
     description:
@@ -413,7 +408,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.1"
->>>>>>> develop
   http_parser:
     dependency: transitive
     description:
@@ -422,8 +416,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
-<<<<<<< HEAD
-=======
   io:
     dependency: transitive
     description:
@@ -432,7 +424,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
->>>>>>> develop
   js:
     dependency: transitive
     description:
@@ -441,8 +432,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.7"
-<<<<<<< HEAD
-=======
   js_wrapping:
     dependency: transitive
     description:
@@ -451,7 +440,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.7.4"
->>>>>>> develop
   json_annotation:
     dependency: transitive
     description:
@@ -464,10 +452,10 @@ packages:
     dependency: transitive
     description:
       name: lints
-      sha256: "5e4a9cd06d447758280a8ac2405101e0e2094d2a1dbdd3756aec3fe7775ba593"
+      sha256: "0a217c6c989d21039f1498c3ed9f3ed71b354e69873f13a8dfc3c9fe76f1b452"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.1"
+    version: "2.1.1"
   logging:
     dependency: transitive
     description:
@@ -500,7 +488,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.1"
-<<<<<<< HEAD
+  mime:
+    dependency: transitive
+    description:
+      name: mime
+      sha256: e4ff8e8564c03f255408decd16e7899da1733852a9110a58fe6d1b817684a63e
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
   ml_dataframe:
     dependency: "direct main"
     description:
@@ -517,15 +512,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "13.11.31"
-=======
-  mime:
-    dependency: transitive
-    description:
-      name: mime
-      sha256: e4ff8e8564c03f255408decd16e7899da1733852a9110a58fe6d1b817684a63e
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.4"
   package_config:
     dependency: transitive
     description:
@@ -534,7 +520,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
->>>>>>> develop
   path:
     dependency: transitive
     description:
@@ -551,16 +536,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.4.0"
-<<<<<<< HEAD
-  quiver:
-    dependency: transitive
-    description:
-      name: quiver
-      sha256: b1c1ac5ce6688d77f65f3375a9abb9319b3cb32486bdc7a1e0fdf004d7ba4e47
-      url: "https://pub.dev"
-    source: hosted
-    version: "3.2.1"
-=======
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -593,6 +568,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.3"
+  quiver:
+    dependency: transitive
+    description:
+      name: quiver
+      sha256: b1c1ac5ce6688d77f65f3375a9abb9319b3cb32486bdc7a1e0fdf004d7ba4e47
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.1"
   sanitize_html:
     dependency: transitive
     description:
@@ -617,7 +600,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.4"
->>>>>>> develop
   sky_engine:
     dependency: transitive
     description: flutter
@@ -679,8 +661,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.5.1"
-<<<<<<< HEAD
-=======
   time:
     dependency: transitive
     description:
@@ -697,7 +677,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.1"
->>>>>>> develop
   typed_data:
     dependency: transitive
     description:
@@ -714,10 +693,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
-<<<<<<< HEAD
-  xml:
-    dependency: "direct main"
-=======
   watcher:
     dependency: transitive
     description:
@@ -735,16 +710,13 @@ packages:
     source: hosted
     version: "2.4.0"
   xml:
-    dependency: transitive
->>>>>>> develop
+    dependency: "direct main"
     description:
       name: xml
       sha256: "5bc72e1e45e941d825fd7468b9b4cc3b9327942649aeb6fc5cdbf135f0a86e84"
       url: "https://pub.dev"
     source: hosted
     version: "6.3.0"
-<<<<<<< HEAD
-=======
   yaml:
     dependency: transitive
     description:
@@ -753,7 +725,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
->>>>>>> develop
 sdks:
   dart: ">=3.0.0 <4.0.0"
   flutter: ">=3.10.0"
