@@ -1,35 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:flutter_zxing/flutter_zxing.dart';
+// import 'package:flutter_zxing/flutter_zxing.dart';
 import '../routes/app_routes.dart';
 
-
-class PositionGetController extends GetxController {
-
-  
-}
+class PositionGetController extends GetxController {}
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
   //  late GoogleMapController mapController;
-  final PositionGetController positionGetController = Get.put(PositionGetController());
+  final PositionGetController positionGetController =
+      Get.put(PositionGetController());
 
   Widget getGoogleMapData() {
-    return SizedBox(
+    return const SizedBox(
       height: 300,
-      child: const GoogleMap(
-        
+      child: GoogleMap(
         initialCameraPosition: CameraPosition(
-        zoom: 17, //ズーム
-        target: LatLng(35.0, 135.0), //経度,緯度
-        tilt: 45.0, //上下の角度
-        bearing: 90.0),
-              ),
-    ); 
+            zoom: 17, //ズーム
+            target: LatLng(35.0, 135.0), //経度,緯度
+            tilt: 45.0, //上下の角度
+            bearing: 90.0),
+      ),
+    );
   }
 
- @override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -40,39 +36,47 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-                            getGoogleMapData(),
-              SizedBox(height: 30,),
-
-               Container(
-              width:330,
-              height: 100,
-            child: ElevatedButton(
-              onPressed: () {},
-              child:Text(
-                "位置,情報の取得",
+              getGoogleMapData(),
+              const SizedBox(
+                height: 30,
               ),
-              style:ButtonStyle(),
-            ),
-            ),
-                          SizedBox(height: 30,),
 
-            Container(
-              width:330,
-              height: 100,
-            child: ElevatedButton(
-              onPressed: () {
-                Get.toNamed(AppRoutes.conditionPage);
-              },
-              child:Text(
-                "お店を探す",
+              SizedBox(
+                width: 330,
+                height: 100,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: const ButtonStyle(),
+                  child: const Text(
+                    "位置,情報の取得",
+                  ),
+                ),
               ),
-              style:ButtonStyle(),
-            ),
-            ),
-            SizedBox(height: 100,),
-            // Children: const <Widget>[
-               
-            SizedBox(height: 100,),
+              const SizedBox(
+                height: 30,
+              ),
+
+              SizedBox(
+                width: 330,
+                height: 100,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Get.toNamed(AppRoutes.conditionPage);
+                  },
+                  style: const ButtonStyle(),
+                  child: const Text(
+                    "お店を探す",
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 100,
+              ),
+              // Children: const <Widget>[
+
+              const SizedBox(
+                height: 100,
+              ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -194,17 +198,17 @@ class MyHomePage extends StatelessWidget {
                   Get.toNamed(AppRoutes.rikuApp);
                 },
               ),
-            //   Container(
-            //   height: 300,
-            //   child: getGoogleMapData(),
-            //   // child: const GoogleMap(
-            //   //   initialCameraPosition: CameraPosition(
-            //   //       zoom: 17, //ズーム
-            //   //       target: LatLng(35.0, 135.0), //経度,緯度
-            //   //       tilt: 45.0, //上下の角度
-            //   //       bearing: 90.0),
-            //   // ),
-            // ),
+              //   Container(
+              //   height: 300,
+              //   child: getGoogleMapData(),
+              //   // child: const GoogleMap(
+              //   //   initialCameraPosition: CameraPosition(
+              //   //       zoom: 17, //ズーム
+              //   //       target: LatLng(35.0, 135.0), //経度,緯度
+              //   //       tilt: 45.0, //上下の角度
+              //   //       bearing: 90.0),
+              //   // ),
+              // ),
             ],
           ),
         ),
@@ -212,8 +216,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
-  
-
-
-  
