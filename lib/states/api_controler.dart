@@ -1,72 +1,45 @@
+import 'dart:convert';
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'dart:convert';
+import 'package:xml/xml.dart' as xml;
 
-void main() {
-  runApp(MyApp());
-}
+class Hotpepperapi {
+  final String lng;
+  final String lat;
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
+  Hotpepperapi({
+    required this.lng,
+    required this.lat,
+  });
 
-class _MyAppState extends State<MyApp> {
-  String lat = '';
-  String lng = '';
-
-  // APIのURL
-  final apiUrl =
-      'https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=f69100125abe9612&large_area=Z011';
-
-  // APIからデータを取得する関数
-  Future<void> fetchData() async {
-    final response = await http.get(Uri.parse(apiUrl));
-
-    if (response.statusCode == 200) {
-      final data = jsonDecode(response.body);
-      final results = data['results']['shop'];
-
-      // 最初の店舗の緯度と経度を取得
-      final firstShop = results[0];
-      final firstShopLat = firstShop['lat'];
-      final firstShopLon = firstShop['lng'];
-
-      setState(() {
-        lat = firstShopLat;
-        lng = firstShopLon;
-      });
-    } else {
-      setState(() {
-        lat = 'エラーが発生しました';
-        lng = 'エラーが発生しました';
-      });
-    }
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    fetchData();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('緯度と経度の表示'),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text('緯度: $lat'),
-              Text('経度: $lng'),
-            ],
-          ),
-        ),
-      ),
+  factory Hotpepperapi.fromXml(xml.XmlElement element) {
+    return Hotpepperapi(
+      lng: element.findElements('lng').first.text,
+      lat: element.findElements('lat').first.text,
     );
+  }
+
+  static List<Hotpepperapi> parseGourmet(String responseBody) {
+    final document = xml.XmlDocument.parse(responseBody);
+    final shopElements = document.findAllElements('shop');
+    return shopElements
+        .map((element) => Hotpepperapi.fromXml(element))
+        .toList();
+  }
+
+  static Future<List<Hotpepperapi>> fetchHotpepperapi() async {
+    try {
+      final response = await http
+          .get(Uri.parse(
+              'https://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=f69100125abe9612&lat=34.67&lng=135.52&range=5&order=4'))
+          .timeout(Duration(seconds: 30));
+      parseGourmet(response.body);
+      return List<Hotpepperapi>.from(jsonDecode(response.body));
+    } catch (error) {
+      debugPrint(error.toString());
+      throw Exception(error.toString());
+    }
   }
 }

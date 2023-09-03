@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../states/api_controler.dart';
 
 import '../routes/app_routes.dart';
 
@@ -7,6 +8,7 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Hotpepperapi hotpepperapi = Get.put(Hotpepperapi(lng: '0', lat: '0'));
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -133,7 +135,15 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               onPressed: () {
+                debugPrint("1");
+
                 Get.toNamed(AppRoutes.rikuApp);
+                debugPrint("2");
+
+                Hotpepperapi.fetchHotpepperapi();
+                debugPrint("3");
+
+                // DebugPrint(static Future<List<Hotpepperapi>> fetchHotpepperapi() async {});
               },
             ),
           ],

@@ -34,12 +34,12 @@ class TaskController extends GetxController {
   //関数の定義
   // 帰り値によって定義が変わる
 
-  RxInt calc_num(int a) {
+  RxInt calcNum(int a) {
     task_length += a;
     return task_length;
   }
 
-  String return_date() {
+  String returnDate() {
     return date.value;
   }
 
