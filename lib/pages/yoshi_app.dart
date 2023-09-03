@@ -29,7 +29,11 @@ class YoshiAppPage extends StatelessWidget {
               ),
               Expanded(
                   child: Text(
+<<<<<<< HEAD
                 "${taskController.task.value}",
+=======
+                "${taskController.taskLength.value}",
+>>>>>>> develop
                 textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 20,

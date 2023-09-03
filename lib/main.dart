@@ -5,7 +5,17 @@ import 'package:team_a_project/routes/app_pages.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+
 void main() {
+  Future firebaseFunc() async{
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  }
+  firebaseFunc();
   runApp(const MyApp());
 }
 
@@ -42,6 +52,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+<<<<<<< HEAD
 class NetworkHelper {
   NetworkHelper({required this.url});
   final String url;
@@ -57,3 +68,5 @@ class NetworkHelper {
     }
   }
 }
+=======
+>>>>>>> develop
