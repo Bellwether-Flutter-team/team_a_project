@@ -9,10 +9,10 @@ class Hotpepperapi {
   });
 
   factory Hotpepperapi.fromJson(Map<String, dynamic> json) {
-    List<String> typesToList(dynamic small_area) {
+    List<String> typesToList(dynamic smallArea) {
       List<String> ret = [];
-      for (int i = 0; i < small_area.length; i++) {
-        ret.add(small_area[i]['small_area']['lng']['lat']);
+      for (int i = 0; i < smallArea.length; i++) {
+        ret.add(smallArea[i]['small_area']['lng']['lat']);
       }
       return ret;
     }

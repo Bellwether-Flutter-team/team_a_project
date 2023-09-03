@@ -6,6 +6,11 @@ import 'package:ml_dataframe/ml_dataframe.dart';
 
 class ShopDateControler extends GetxController {
   RxString question = "ご飯食べたいですか？".obs;
+  RxInt pageCount = 0.obs;
+
+  increment() {
+    pageCount++;
+  }
 
   List<QuestionModel> quesions = [
     QuestionModel('ご予算は3000円未満ですか？', 3000, "price"),

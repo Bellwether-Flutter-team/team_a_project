@@ -9,12 +9,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 void main() {
-  // Future firebaseFunc() async{
-  //   await Firebase.initializeApp(
-  //     options: DefaultFirebaseOptions.currentPlatform,
-  //   );
-  // }
-  // firebaseFunc();
+  Future firebaseFunc() async {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  }
+
+  firebaseFunc();
   runApp(const MyApp());
 }
 
