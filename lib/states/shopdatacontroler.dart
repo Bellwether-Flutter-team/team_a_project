@@ -3,6 +3,7 @@
 import 'package:get/get.dart';
 // import 'dart:math';
 import 'package:ml_dataframe/ml_dataframe.dart';
+import 'package:team_a_project/routes/app_routes.dart';
 
 class ShopDateControler extends GetxController {
   RxString question = "ご飯食べたいですか？".obs;
@@ -24,6 +25,13 @@ class ShopDateControler extends GetxController {
     QuestionModel('6名様以下でのご利用ですか？', 6, 'population'),
     QuestionModel('禁煙席をご希望ですか？', 0, 'smoking')
   ];
+
+  transController() {
+    if (pageCount.value == 3) {
+      pageCount.value = 0;
+      Get.toNamed(AppRoutes.decidePage);
+    } else {}
+  }
 
   dropByValue1(int value, String col) {
     for (int i = 0; i < 3; i++) {
