@@ -25,7 +25,7 @@ class TaskController extends GetxController {
   var b = 10;
 
   // 変数の定義
-  RxInt task_length = 0.obs;
+  RxInt taskLength = 0.obs;
   RxString tasktitle = "".obs; // Getx
   String title = ""; // 通常
   var task = 0.obs; // Varで定義するとなんでも受け入れる
@@ -35,8 +35,8 @@ class TaskController extends GetxController {
   // 帰り値によって定義が変わる
 
   RxInt calcNum(int a) {
-    task_length += a;
-    return task_length;
+    taskLength += a;
+    return taskLength;
   }
 
   String returnDate() {
@@ -44,7 +44,7 @@ class TaskController extends GetxController {
   }
 
   void increment(int a) {
-    task_length.value += a;
+    taskLength.value += a;
     update();
   }
 }

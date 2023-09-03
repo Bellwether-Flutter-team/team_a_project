@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:team_a_project/pages/home.dart';
 import 'package:team_a_project/routes/app_pages.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 void main() {
   runApp(const MyApp());
@@ -37,5 +39,21 @@ class MyApp extends StatelessWidget {
       ),
       getPages: AppPages.list,
     );
+  }
+}
+
+class NetworkHelper {
+  NetworkHelper({required this.url});
+  final String url;
+  Future<dynamic> getDate() async {
+    http.Response responce;
+    responce = await http.get(Uri.parse(url));
+    if (responce.statusCode == 200) {
+      String data = responce.body;
+      dynamic jsonObject = jsonDecode(data);
+      return jsonObject;
+    } else {
+      debugPrint(responce.statusCode as String?);
+    }
   }
 }

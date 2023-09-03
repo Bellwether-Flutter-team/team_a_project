@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:team_a_project/states/shopdatacontroler.dart';
+import 'package:get/get.dart';
 
 class ConditionPage extends StatelessWidget {
   const ConditionPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    ShopDateControler shopDateControler = Get.put(ShopDateControler());
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("これが条件分岐のページです"),
@@ -21,7 +26,7 @@ class ConditionPage extends StatelessWidget {
                     alignment: Alignment.center,
                     height: 200,
                     width: 200,
-                    child: Text('ここに問題文'),
+                    child: Text(shopDateControler.question.value),
                   ),
                 ),
               ],
@@ -31,7 +36,9 @@ class ConditionPage extends StatelessWidget {
               children: [
                 ElevatedButton(
                   child: const Text('1', semanticsLabel: '1'),
-                  onPressed: () {},
+                  onPressed: () {
+                    shopDateControler.questionStateUpdate(0);
+                  },
                 ),
                 ElevatedButton(
                   child: const Text(
