@@ -5,17 +5,12 @@
 import FlutterMacOS
 import Foundation
 
-// <<<<<<< feature/rikuya
-// import file_selector_macos
-// import geolocator_apple
-
-// func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
-//   FileSelectorPlugin.register(with: registry.registrar(forPlugin: "FileSelectorPlugin"))
-//   GeolocatorPlugin.register(with: registry.registrar(forPlugin: "GeolocatorPlugin"))
-// =======
+import file_selector_macos
 import firebase_core
+import geolocator_apple
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
+  FileSelectorPlugin.register(with: registry.registrar(forPlugin: "FileSelectorPlugin"))
   FLTFirebaseCorePlugin.register(with: registry.registrar(forPlugin: "FLTFirebaseCorePlugin"))
-
+  GeolocatorPlugin.register(with: registry.registrar(forPlugin: "GeolocatorPlugin"))
 }
