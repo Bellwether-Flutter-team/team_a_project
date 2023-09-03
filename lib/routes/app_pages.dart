@@ -11,7 +11,7 @@ class AppPages {
   static final List<GetPage<dynamic>> list = <GetPage<dynamic>>[
     GetPage(
       name: AppRoutes.home,
-      page: () => const MyHomePage(),
+      page: () =>  MyHomePage(),
     ),
     GetPage(
       name: AppRoutes.yoshiApp,
