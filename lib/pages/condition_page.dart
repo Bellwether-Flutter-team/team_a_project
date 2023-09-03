@@ -6,7 +6,7 @@ class ConditionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("これが条件分岐のページです"),
+        title: const Text("魔人がお店を考えています"),
         backgroundColor: Theme.of(context).highlightColor,
       ),
       body: Center(

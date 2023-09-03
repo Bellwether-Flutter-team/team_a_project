@@ -133,7 +133,7 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Get.toNamed(AppRoutes.rikuApp);
+                Get.toNamed(AppRoutes.decidePage);
               },
             ),
           ],
