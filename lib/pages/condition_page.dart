@@ -115,6 +115,7 @@ class ConditionPage extends StatelessWidget {
                     onPressed: () {
                       shopDateControler.questionStateUpdate(0);
                       shopDateControler.increment();
+                      shopDateControler.dropByValue1;
                     },
                   ),
                   const SizedBox(
@@ -130,6 +131,7 @@ class ConditionPage extends StatelessWidget {
                     ),
                     onPressed: () {
                       shopDateControler.increment();
+                      shopDateControler.dropByValue1;
                     },
                   ),
                   const SizedBox(
@@ -145,6 +147,7 @@ class ConditionPage extends StatelessWidget {
                     ),
                     onPressed: () {
                       shopDateControler.increment();
+                      shopDateControler.dropByValue2;
                     },
                   ),
                 ],
