@@ -3,7 +3,17 @@ import 'package:get/route_manager.dart';
 import 'package:team_a_project/pages/home.dart';
 import 'package:team_a_project/routes/app_pages.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+
 void main() {
+  Future firebaseFunc() async{
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
+  }
+  firebaseFunc();
   runApp(const MyApp());
 }
 
@@ -39,3 +49,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
