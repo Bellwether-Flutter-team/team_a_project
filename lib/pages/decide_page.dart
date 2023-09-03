@@ -18,7 +18,8 @@ class DecidePage extends StatelessWidget {
     return Obx(
       () => Scaffold(
         appBar: AppBar(
-          title: Text(decidepagecontroller.shopname.value),
+          // title: Text(decidepagecontroller.shopname.value),
+          title: const Text("ガスト 国立駅前店（から好し取扱店）"),
           backgroundColor: Theme.of(context).highlightColor,
         ),
         body: SingleChildScrollView(
