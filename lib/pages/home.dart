@@ -35,183 +35,181 @@ class MyHomePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                getGoogleMapData(),
-                const SizedBox(
-                  height: 30,
-                ),
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              getGoogleMapData(),
+              const SizedBox(
+                height: 30,
+              ),
 
-                SizedBox(
-                  width: 330,
-                  height: 100,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: const ButtonStyle(),
-                    child: const Text(
-                      "位置,情報の取得",
-                    ),
+              SizedBox(
+                width: 330,
+                height: 100,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: const ButtonStyle(),
+                  child: const Text(
+                    "位置,情報の取得",
                   ),
                 ),
-                const SizedBox(
-                  height: 30,
-                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
 
-                SizedBox(
-                  width: 330,
-                  height: 100,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Get.toNamed(AppRoutes.conditionPage);
-                    },
-                    style: const ButtonStyle(),
-                    child: const Text(
-                      "お店を探す",
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 100,
-                ),
-                // Children: const <Widget>[
-
-                const SizedBox(
-                  height: 100,
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    backgroundColor: Theme.of(context).primaryColor,
-                    foregroundColor: Colors.black,
-                    elevation: 0,
-                    shape: StadiumBorder(
-                      side: BorderSide(
-                          width: 1, color: Theme.of(context).primaryColor),
-                    ),
-                  ),
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.55,
-                    height: 45.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: Container(
-                            width: double.infinity,
-                            alignment: Alignment.center,
-                            child: const Text(
-                              'よしひとのアプリ',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  onPressed: () {
-                    Get.toNamed(AppRoutes.yoshiApp);
-                  },
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    backgroundColor: Theme.of(context).primaryColor,
-                    foregroundColor: Colors.black,
-                    elevation: 0,
-                    shape: StadiumBorder(
-                      side: BorderSide(
-                          width: 1, color: Theme.of(context).primaryColor),
-                    ),
-                  ),
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.55,
-                    height: 45.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: Container(
-                            width: double.infinity,
-                            alignment: Alignment.center,
-                            child: const Text(
-                              'ConditionPageへ',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+              SizedBox(
+                width: 330,
+                height: 100,
+                child: ElevatedButton(
                   onPressed: () {
                     Get.toNamed(AppRoutes.conditionPage);
                   },
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    backgroundColor:
-                        Theme.of(context).colorScheme.inversePrimary,
-                    foregroundColor: Colors.black,
-                    elevation: 0,
-                    shape: StadiumBorder(
-                      side: BorderSide(
-                          width: 1,
-                          color: Theme.of(context).colorScheme.inversePrimary),
-                    ),
+                  style: const ButtonStyle(),
+                  child: const Text(
+                    "お店を探す",
                   ),
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.55,
-                    height: 45.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Expanded(
-                          child: Container(
-                            width: double.infinity,
-                            alignment: Alignment.center,
-                            child: const Text(
-                              'りくやのアプリ',
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
-                              ),
+                ),
+              ),
+              const SizedBox(
+                height: 100,
+              ),
+              // Children: const <Widget>[
+
+              const SizedBox(
+                height: 100,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  backgroundColor: Theme.of(context).primaryColor,
+                  foregroundColor: Colors.black,
+                  elevation: 0,
+                  shape: StadiumBorder(
+                    side: BorderSide(
+                        width: 1, color: Theme.of(context).primaryColor),
+                  ),
+                ),
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.55,
+                  height: 45.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          width: double.infinity,
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'よしひとのアプリ',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
                             ),
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
-                  onPressed: () {
-                    Get.toNamed(AppRoutes.rikuApp);
-                  },
                 ),
-                // onPressed: () {
-                //   debugPrint("1");
+                onPressed: () {
+                  Get.toNamed(AppRoutes.yoshiApp);
+                },
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  backgroundColor: Theme.of(context).primaryColor,
+                  foregroundColor: Colors.black,
+                  elevation: 0,
+                  shape: StadiumBorder(
+                    side: BorderSide(
+                        width: 1, color: Theme.of(context).primaryColor),
+                  ),
+                ),
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.55,
+                  height: 45.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          width: double.infinity,
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'ConditionPageへ',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                onPressed: () {
+                  Get.toNamed(AppRoutes.conditionPage);
+                },
+              ),
 
-                //   Get.toNamed(AppRoutes.rikuApp);
-                //   debugPrint("2");
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+                  foregroundColor: Colors.black,
+                  elevation: 0,
+                  shape: StadiumBorder(
+                    side: BorderSide(
+                        width: 1,
+                        color: Theme.of(context).colorScheme.inversePrimary),
+                  ),
+                ),
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.55,
+                  height: 45.0,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Container(
+                          width: double.infinity,
+                          alignment: Alignment.center,
+                          child: const Text(
+                            'りくやのアプリ',
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                onPressed: () {
+                  Get.toNamed(AppRoutes.rikuApp);
+                },
+              ),
+              // onPressed: () {
+              //   debugPrint("1");
 
-                //   // hotpepperapi.fetchHotpepperapi();
-                //   debugPrint("3");
+              //   Get.toNamed(AppRoutes.rikuApp);
+              //   debugPrint("2");
 
-                //   // DebugPrint(static Future<List<Hotpepperapi>> fetchHotpepperapi() async {});
-                // },
-              ]),
+              //   // hotpepperapi.fetchHotpepperapi();
+              //   debugPrint("3");
+
+              //   // DebugPrint(static Future<List<Hotpepperapi>> fetchHotpepperapi() async {});
+              // },
+            ],
+          ),
         ),
       ),
     );
