@@ -27,12 +27,21 @@ class DecidePage extends StatelessWidget {
                     bearing: 90.0),
               ),
             ),
+            const SizedBox(
+              height: 30,
+            ),
             SizedBox(
               width: 300,
               height: 100,
               child: ElevatedButton(
                 onPressed: () {},
-                child: const Text('外部サイトに飛ぶ'),
+                child: const Row(
+                  children: [
+                    Icon(Icons.web),
+                    Expanded(child: SizedBox()),
+                    Text('お店を見る/予約する'),
+                  ],
+                ),
               ),
             ),
             Container(
