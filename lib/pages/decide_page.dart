@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:google_maps/google_maps.dart';
 import '../routes/app_routes.dart';
 import '../states/decide_page_controller.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -15,7 +16,7 @@ class DecidePage extends StatelessWidget {
     ShopDataController shopDataController = Get.put(ShopDataController());
     DecidePageController decidepagecontroller = Get.put(DecidePageController());
     return Obx(
-      ()=> Scaffold(
+      () => Scaffold(
         appBar: AppBar(
           title: Text(decidepagecontroller.shopname.value),
           backgroundColor: Theme.of(context).highlightColor,
@@ -24,17 +25,20 @@ class DecidePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
+              SizedBox(
                 height: 300,
                 child: GoogleMap(
                   initialCameraPosition: CameraPosition(
                       zoom: 17, //ズーム
-                      target: LatLng(decidepagecontroller.shopplacelatitude.value, decidepagecontroller.shopplacelongitude.value), //経度,緯度
+                      target: LatLng(
+                          decidepagecontroller.shopplacelatitude.value,
+                          decidepagecontroller
+                              .shopplacelongitude.value), //経度,緯度
                       tilt: 45.0, //上下の角度
                       bearing: 90.0),
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 300,
                 height: 100,
                 child: ElevatedButton(
@@ -42,18 +46,24 @@ class DecidePage extends StatelessWidget {
                     final url = Uri.parse(decidepagecontroller.targeturl.value);
                     launchUrl(url);
                   },
-                  child: Text('外部サイトに飛ぶ'),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.web),
+                      Expanded(child: SizedBox()),
+                      Text('お店を見る/予約する'),
+                    ],
+                  ),
                 ),
               ),
               Container(
                 width: 300,
                 height: 100,
-                margin: EdgeInsets.all(50),
+                margin: const EdgeInsets.all(50),
                 child: ElevatedButton(
                   onPressed: () {
                     Get.toNamed(AppRoutes.home);
                   },
-                  child: Text('最初に戻る'),
+                  child: const Text('最初に戻る'),
                 ),
               ),
             ],
