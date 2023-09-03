@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "439799537108",
+    "firebase_url": "https://summerhackathon-d2525-default-rtdb.firebaseio.com",
+    "project_id": "summerhackathon-d2525",
+    "storage_bucket": "summerhackathon-d2525.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439799537108:android:686a23d4e3ee626c9a8a41",
+        "android_client_info": {
+          "package_name": "com.example.team_a_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439799537108-80p9tios805k1546t2uqqp4cfshdp0ag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZvCY3tj3Et7qRnsLtcYWyj9Kz8P1kuwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "439799537108-80p9tios805k1546t2uqqp4cfshdp0ag.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "439799537108-n7ka0atv33qu6tto5nhrujk35dna8inc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.teamAProject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
