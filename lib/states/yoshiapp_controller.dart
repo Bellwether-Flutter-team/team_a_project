@@ -21,32 +21,43 @@ class TaskController extends GetxController {
   // 状態とは『変数（の初期値）』と『変数の変化』の二つの観点で考える
   // 『状態の変化』とは関数による更新であり、例えばフロントエンドのボタンの操作に埋め込まれた関数などがある
 
-  int a = 0;
-  var b = 10;
+  // int a = 0;
+  // var b = 10;
 
-  // 変数の定義
-  RxInt taskLength = 0.obs;
-  RxString tasktitle = "".obs; // Getx
-  String title = ""; // 通常
-  var task = 0.obs; // Varで定義するとなんでも受け入れる
+  // // 変数の定義
+  // RxInt taskLength = 0.obs;
+  // RxString tasktitle = "".obs; // Getx
+  // String title = ""; // 通常
+  // var task = 0.obs; // Varで定義するとなんでも受け入れる
 
-  RxString date = "2023/08/20".obs;
-  //関数の定義
-  // 帰り値によって定義が変わる
+  // RxString date = "2023/08/20".obs;
+  // //関数の定義
+  // // 帰り値によって定義が変わる
 
-  RxInt calcNum(int a) {
-    taskLength += a;
-    return taskLength;
+  // RxInt calcNum(int a) {
+  //   taskLength += a;
+  //   return taskLength;
+  // }
+
+  // String returnDate() {
+  //   return date.value;
+  // }
+
+  // void increment(int a) {
+  //   taskLength.value += a;
+  //   update();
+  // }
+  Rx<DateTime> date = DateTime.now().obs;
+
+  void advanceDate() {
+    date.value = date.value.add(const Duration(days: 1));
+    update();
   }
 
-  String returnDate() {
-    return date.value;
-  }
-
-  void increment(int a) {
-    taskLength.value += a;
+  void backDate() {
+    date.value = date.value.subtract(const Duration(days: 1));
     update();
   }
 }
 
-class TaskModel {}
+// class TaskModel {}
