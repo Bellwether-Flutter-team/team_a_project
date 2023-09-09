@@ -71,13 +71,9 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 100,
+                height: 50,
               ),
-              // Children: const <Widget>[
 
-              const SizedBox(
-                height: 100,
-              ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -157,7 +153,9 @@ class MyHomePage extends StatelessWidget {
                   Get.toNamed(AppRoutes.conditionPage);
                 },
               ),
-
+              const SizedBox(
+                height: 30,
+              ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),

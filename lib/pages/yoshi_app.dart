@@ -8,12 +8,6 @@ class YoshiAppPage extends StatelessWidget {
   Widget build(BuildContext context) {
     TaskController taskController = Get.put(TaskController());
     return Scaffold(
-      // appBar: AppBar(
-      //   automaticallyImplyLeading: false,
-      //   centerTitle: true,
-      //   backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      //   title: const Text('タスク一覧'),
-      // ),
       body: Center(
           child: Column(
         children: <Widget>[
