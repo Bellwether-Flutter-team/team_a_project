@@ -60,4 +60,22 @@ class TaskController extends GetxController {
   }
 }
 
-// class TaskModel {}
+class TaskModel {
+  int task_id;
+  String task_name;
+  DateTime date_register;
+  DateTime date_deadline;
+  int? tag_id;
+  String? tag_name;
+  int state;
+
+  TaskModel(
+    this.task_id,
+    this.task_name,
+    this.date_register,
+    this.date_deadline,
+    this.tag_id,
+    this.tag_name,
+    this.state,
+  );
+}
