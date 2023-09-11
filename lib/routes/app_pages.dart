@@ -30,7 +30,6 @@ class AppPages {
       name: AppRoutes.decidePage,
       page: () => const DecidePage(),
     ),
-    GetPage(
-        name: AppRoutes.yoshiAppAddTask, page: () => const YoshiTaskAddPage())
+    GetPage(name: AppRoutes.yoshiAppAddTask, page: () => YoshiTaskAddPage())
   ];
 }

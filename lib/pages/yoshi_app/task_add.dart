@@ -2,28 +2,45 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:team_a_project/routes/app_routes.dart';
 
-class YoshiTaskAddPage extends StatelessWidget {
-  const YoshiTaskAddPage({Key? key}) : super(key: key);
+class YoshiTaskAddPage extends StatefulWidget {
+  YoshiTaskAddPage({Key? key}) : super(key: key);
+
+  @override
+  _YoshiTaskAddPageState createState() => _YoshiTaskAddPageState();
+}
+
+class _YoshiTaskAddPageState extends State<YoshiTaskAddPage> {
+  // const YoshiTaskAddPage({Key? key}) : super(key: key);
 
   static const _tagOptions = ["タグ1", "タグ2", "タグ3", "タグ4", "タグ5"];
-  // DateTime _date = DateTime.now();
+  static const Map<int, String> _weekdays = {
+    1: "Mon",
+    2: "Tue",
+    3: "Wed",
+    4: "Thu",
+    5: "Fri",
+    6: "Sat",
+    7: "Sun"
+  };
+  DateTime _date = DateTime.now();
 
-  // Future<Null> _selectDate(BuildContext context) async {
-  //   final DateTime? picked = await showDatePicker(
-  //     context: context,
-  //     initialDate: DateTime.now(),
-  //     firstDate: DateTime(2021),
-  //     lastDate: DateTime(2025),
-  //   );
-  //   if (picked != null) {
-  //     setState(() {
-  //       _date = picked;
-  //     });
-  //   }
-// }
+  Future<void> _selectDate(BuildContext context) async {
+    final DateTime? picked = await showDatePicker(
+      context: context,
+      initialDate: DateTime.now(),
+      firstDate: DateTime(2021),
+      lastDate: DateTime(2025),
+    );
+    if (picked != null) {
+      setState(() {
+        _date = picked;
+      });
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
@@ -81,6 +98,7 @@ class YoshiTaskAddPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    const SizedBox(height: 20),
                     Row(
                       children: [
                         const Icon(
@@ -90,11 +108,20 @@ class YoshiTaskAddPage extends StatelessWidget {
                         const SizedBox(width: 10),
                         const Text('期限'),
                         const SizedBox(width: 20),
-                        Flexible(
-                          child: TextField(
-                            onTap: () => {},
-                          ),
-                        ),
+                        SizedBox(
+                            width: size.width * 0.3,
+                            child: TextButton(
+                              style: const ButtonStyle(
+                                  alignment: Alignment.centerLeft),
+                              onPressed: () => _selectDate(context),
+                              child: Text(
+                                "${_date.year}/${_date.month}/${_date.day}  ${_weekdays[_date.weekday]}",
+                                style: const TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            )),
                       ],
                     ),
                   ],
